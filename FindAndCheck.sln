@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34804.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindAndCheck", "FindAndCheck.csproj", "{13F737FE-A948-49BD-867C-D70833F973FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindAndCheck", "FindAndCheck.csproj", "{13F737FE-A948-49BD-867C-D70833F973FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8F5F049E-02AD-4332-9BFA-466743EAECB6}"
+	ProjectSection(SolutionItems) = preProject
+		settings.json = settings.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

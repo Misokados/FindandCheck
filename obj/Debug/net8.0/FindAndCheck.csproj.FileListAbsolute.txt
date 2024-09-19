@@ -15,3 +15,11 @@ D:\apps\Visual Studio\repos\FindAndCheck\obj\Debug\net8.0\refint\FindAndCheck.dl
 D:\apps\Visual Studio\repos\FindAndCheck\obj\Debug\net8.0\FindAndCheck.pdb
 D:\apps\Visual Studio\repos\FindAndCheck\obj\Debug\net8.0\FindAndCheck.genruntimeconfig.cache
 D:\apps\Visual Studio\repos\FindAndCheck\obj\Debug\net8.0\ref\FindAndCheck.dll
+D:\apps\Visual Studio\repos\FindAndCheck\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+D:\apps\Visual Studio\repos\FindAndCheck\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\apps\Visual Studio\repos\FindAndCheck\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\apps\Visual Studio\repos\FindAndCheck\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+D:\apps\Visual Studio\repos\FindAndCheck\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\apps\Visual Studio\repos\FindAndCheck\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\apps\Visual Studio\repos\FindAndCheck\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\apps\Visual Studio\repos\FindAndCheck\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll

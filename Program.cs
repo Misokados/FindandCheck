@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -9,8 +10,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        string referenceFilePath = @"D:\apps\Visual Studio\repos\FindAndCheck\another config\default.json";
-        string sampleFilePath = @"D:\apps\Visual Studio\repos\FindAndCheck\default.json";
+        // Set up configuration
+        var configuration = new ConfigurationBuilder()
+            .AddJsonFile("settings.json")
+            .Build();
+
+        // Get file paths from configuration
+        string referenceFilePath = configuration["FilePaths:ReferenceFilePath"];
+        string sampleFilePath = configuration["FilePaths:SampleFilePath"];
 
         try
         {
