@@ -16,13 +16,36 @@ class Program
             .Build();
 
         // Get file paths from configuration
-        string referenceFilePath = configuration["FilePaths:ReferenceFilePath"];
-        string sampleFilePath = configuration["FilePaths:SampleFilePath"];
+        string Userfile = configuration["FilePaths:Userfile"];
+        string Yoursample = configuration["FilePaths:Yoursample"];
+
+        // Debug output for paths
+        Console.WriteLine($"Userfile path: '{Userfile}'");
+        Console.WriteLine($"Yoursample path: '{Yoursample}'");
+
+        if (string.IsNullOrWhiteSpace(Userfile) || string.IsNullOrWhiteSpace(Yoursample))
+        {
+            Console.WriteLine("You have a problem with file's path");
+            return;
+        }
+
+        // Check if files exist
+        if (!File.Exists(Userfile))
+        {
+            Console.WriteLine($"File not found: {Userfile}");
+            return;
+        }
+
+        if (!File.Exists(Yoursample))
+        {
+            Console.WriteLine($"File not found: {Yoursample}");
+            return;
+        }
 
         try
         {
-            var referenceJson = File.ReadAllText(referenceFilePath);
-            var sampleJson = File.ReadAllText(sampleFilePath);
+            var referenceJson = File.ReadAllText(Userfile);
+            var sampleJson = File.ReadAllText(Yoursample);
 
             var referenceObject = JsonConvert.DeserializeObject<JObject>(referenceJson);
             var sampleObject = JsonConvert.DeserializeObject<JObject>(sampleJson);
@@ -47,12 +70,16 @@ class Program
         }
         catch (FileNotFoundException ex)
         {
-            Console.WriteLine($"Cant find file: {ex.FileName}");
+            Console.WriteLine($"Can't find file: {ex.FileName}");
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Some error: {ex.Message}");
         }
+
+        // Wait for user input before closing the console window
+        Console.WriteLine("Press any key to exit...");
+        Console.ReadKey();
     }
 
     static Dictionary<string, ValueDifference> CompareObjects(JObject reference, JObject sample, string parentKey = "")
